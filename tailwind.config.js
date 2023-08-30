@@ -77,6 +77,9 @@ module.exports = {
           800: '#EBEBEB',
           900: '#FFF',
         },
+        background: {
+          DEFAULT: '#F7F6FF',
+        },
       },
     },
   },

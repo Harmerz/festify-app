@@ -1,7 +1,10 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
+
+import { Button } from '@/components/element'
 
 export default function OnboardingPage() {
   const data = [
@@ -27,8 +30,8 @@ export default function OnboardingPage() {
   ]
   const [onboarding, setOnboarding] = useState(0)
   return (
-    <div className="w-full flex flex-col justify-center py-3 h-screen items-start bg-white">
-      <div className="flex justify-center w-full">
+    <div className="flex h-screen w-full flex-col items-start justify-center bg-white py-3">
+      <div className="flex w-full justify-center">
         <Image
           src="/assets/logo.svg"
           className="flex justify-center text-center"
@@ -37,52 +40,60 @@ export default function OnboardingPage() {
           alt="logo"
         />
       </div>
-      <div className="w-full h-4/5 justify-center items-center flex flex-col">
-        <div className="w-full px-10 h-full max-h-52">
-          <div className="relative px-10 w-full h-full flex max-h-52">
+      <div className="flex h-4/5 w-full flex-col items-center justify-center">
+        <div className="h-full max-h-52 w-full px-10">
+          <div className="relative flex h-full max-h-52 w-full px-10">
             <Image
               src={`/assets/images/onboarding/onboarding (${onboarding + 1}).svg`}
-              className="object-contain"
+              className="object-contain transition-all"
               fill
               alt={`onboarding ${onboarding}`}
             />
           </div>
         </div>
-        <div className="flex flex-col gap-4 mt-16 mx-6">
-          <h2 className="text-4xl font-bold text-primary-900">{data[onboarding].title}</h2>
-          <h2 className="text-base text-hitam-700">{data[onboarding].description}</h2>
+        <div className="mx-6 mt-16 flex flex-col gap-4">
+          <h2 className="text-4xl font-bold text-primary-900 transition-all">
+            {data[onboarding].title}
+          </h2>
+          <h2 className="text-base text-hitam-700 transition-all">
+            {data[onboarding].description}
+          </h2>
         </div>
       </div>
-      <div className="flex flex-row items-center px-7 justify-between w-full">
+      <div className="flex w-full flex-row items-center justify-between px-7">
         <div className="flex flex-row gap-1">
           <div
-            className={`h-2 rounded-full ${
-              onboarding === 0 ? 'bg-primary w-8' : 'bg-hitam-100 w-2'
+            className={`h-2 rounded-full transition-all ${
+              onboarding === 0 ? 'w-8 bg-primary' : 'w-2 bg-hitam-100'
             }`}
           />
           <div
-            className={`h-2 rounded-full ${
-              onboarding === 1 ? 'bg-primary w-8' : 'bg-hitam-100 w-2'
+            className={`h-2 rounded-full transition-all ${
+              onboarding === 1 ? 'w-8 bg-primary' : 'w-2 bg-hitam-100'
             }`}
           />
           <div
-            className={`h-2 rounded-full ${
-              onboarding === 2 ? 'bg-primary w-8' : 'bg-hitam-100 w-2'
+            className={`h-2 rounded-full transition-all ${
+              onboarding === 2 ? 'w-8 bg-primary' : 'w-2 bg-hitam-100'
             }`}
           />
           <div
-            className={`h-2 rounded-full ${
-              onboarding === 3 ? 'bg-primary w-8' : 'bg-hitam-100 w-2'
+            className={`h-2 rounded-full transition-all ${
+              onboarding === 3 ? 'w-8 bg-primary' : 'w-2 bg-hitam-100'
             }`}
           />
         </div>
-        <button
-          type="button"
-          className="bg-primary py-3 w-40 rounded text-white text-base"
-          onClick={() => setOnboarding(onboarding < 4 ? onboarding + 1 : onboarding)}
-        >
-          Next
-        </button>
+        {onboarding === 3 ? (
+          <Link href="/home" className="w-40">
+            <Button>Get Started!</Button>
+          </Link>
+        ) : (
+          <div className="w-40">
+            <Button onClick={() => [setOnboarding(onboarding < 3 ? onboarding + 1 : onboarding)]}>
+              Next
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   )

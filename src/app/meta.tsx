@@ -1,11 +1,12 @@
-export const Meta = () => {
+/* eslint-disable react/no-invalid-html-attribute */
+export function Meta() {
   return (
     <>
-      <meta name="application-name" content="PWA App" />
+      <meta name="application-name" content="Festify" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="PWA App" />
-      <meta name="description" content="Best PWA App in the world" />
+      <meta name="apple-mobile-web-app-title" content="Festify" />
+      <meta name="description" content="Best Festify in the world" />
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="msapplication-config" content="./icons/browserconfig.xml" />
@@ -30,17 +31,17 @@ export const Meta = () => {
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:url" content="https://yourdomain.com" />
-      <meta name="twitter:title" content="PWA App" />
-      <meta name="twitter:description" content="Best PWA App in the world" />
+      <meta name="twitter:title" content="Festify" />
+      <meta name="twitter:description" content="Best Festify in the world" />
       <meta
         name="twitter:image"
         content="https://yourdomain.com./icons/android-chrome-192x192.png"
       />
       <meta name="twitter:creator" content="@DavidWShadow" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="PWA App" />
-      <meta property="og:description" content="Best PWA App in the world" />
-      <meta property="og:site_name" content="PWA App" />
+      <meta property="og:title" content="Festify" />
+      <meta property="og:description" content="Best Festify in the world" />
+      <meta property="og:site_name" content="Festify" />
       <meta property="og:url" content="https://yourdomain.com" />
       <meta property="og:image" content="https://yourdomain.com/icons/apple-touch-icon.png" />
 
@@ -74,3 +75,5 @@ export const Meta = () => {
     </>
   )
 }
+
+export default Meta
