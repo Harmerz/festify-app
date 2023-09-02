@@ -59,20 +59,20 @@ function BackActive() {
 
 export function BottomBar() {
   return (
-    <div className="fixed bottom-0 flex w-full flex-row gap-0">
-      <div className="borderWhite bgWhite flex h-14 w-1/6 grow flex-col justify-center border">
+    <div className="fixed bottom-0 z-[9999] flex w-full flex-row gap-0">
+      <div className="flex h-14 w-1/6 grow flex-col justify-center border border-white bg-white">
         <div className="flex justify-center">
           <PiCreditCard className="h-6 w-6 object-contain text-primary" />
         </div>
         <p className="text-center text-[10px] font-bold text-primary">Budget</p>
       </div>
-      <div className="borderWhite bgWhite  z-10 flex h-14 w-1/6 grow flex-col justify-center border">
+      <div className="z-10 flex  h-14 w-1/6 grow flex-col justify-center border border-white bg-white">
         <div className="flex justify-center">
           <BillDollar className="h-6 w-6 object-contain text-primary" />
         </div>
         <p className="text-center text-[10px] font-bold text-primary">Transaction</p>
       </div>
-      <div className="borderWhite flex w-[115px] flex-col items-end border-x bg-transparent" />
+      <div className="flex w-[115px] flex-col items-end border-x border-white bg-transparent" />
       <div className="absolute bottom-6 left-1/2 flex h-20 w-20 -translate-x-1/2 flex-col justify-center rounded-full border-4 border-transparent bg-primary">
         <div className="flex justify-center">
           <LiaHomeSolid className="textWhite h-10 w-10 object-contain" />
@@ -82,13 +82,13 @@ export function BottomBar() {
       <div className="absolute left-1/2 z-0 -translate-x-1/2">
         <BackActive />
       </div>
-      <div className="borderWhite bgWhite  z-10 flex h-14 w-1/6 grow flex-col justify-center border">
+      <div className="z-10 flex  h-14 w-1/6 grow flex-col justify-center border border-white bg-white">
         <div className="flex justify-center">
           <BsCardChecklist className="h-6 w-6 object-contain text-primary" />
         </div>
         <p className="text-center text-[10px] font-bold text-primary">Whislist</p>
       </div>
-      <div className="borderWhite bgWhite flex  h-14 w-1/6 grow flex-col justify-center border">
+      <div className="flex h-14 w-1/6  grow flex-col justify-center border border-white bg-white">
         <div className="flex justify-center">
           <BsChatLeftDots className="h-6 w-6 object-contain text-primary" />
         </div>
