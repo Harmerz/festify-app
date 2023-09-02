@@ -52,7 +52,7 @@ export default function Home() {
     <div className="bg-background h-full min-h-[100vh] pb-28">
       <div className="flex min-h-fit flex-col justify-center p-6">
         <div className="flex flex-row items-center">
-          <div className="relative mr-3 h-10 w-10 rounded-full">
+          <div className="relative mr-3 flex h-10 w-10 rounded-full">
             <Image
               src="/assets/images/Taylor-Swift.png"
               alt="photo-profile"
@@ -60,15 +60,15 @@ export default function Home() {
               className="rounded-full"
             />
           </div>
-          <div className="relative flex h-full w-full grow">
+          <div className="relative flex h-full w-2/5 grow">
             <FiSearch className="my-aut2 absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-hitam-50" />
             <input
               type="text"
               placeholder="Find services, vendor, or item"
-              className="h-10 w-full rounded-lg border border-hitam-50 px-4 pl-8 text-xs text-black focus:border-0"
+              className="mr-4 h-10 w-full rounded-lg border border-hitam-50 px-4 pl-8 text-xs text-black focus:border-0"
             />
           </div>
-          <FiBell className="ml-4 h-6 w-6 text-hitam" />
+          <FiBell className="h-6 w-6 text-hitam" />
         </div>
         <div className="mt-6 flex flex-row items-center">
           <div className="relative flex h-10 w-10 items-center justify-center">

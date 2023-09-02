@@ -4,7 +4,7 @@ export function Button({ onClick, children }: { onClick?: () => void; children: 
   return (
     <button
       type="button"
-      className="w-full rounded bg-primary py-3 text-base text-white"
+      className="w-full rounded-lg bg-primary py-3 text-base text-white"
       onClick={onClick}
     >
       {children}
