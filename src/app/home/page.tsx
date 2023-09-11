@@ -49,17 +49,17 @@ export default function Home() {
     },
   ]
   return (
-    <div className="bg-background h-full min-h-[100vh] pb-28">
+    <div className="h-full min-h-[100vh] bg-background pb-28">
       <div className="flex min-h-fit flex-col justify-center p-6">
         <div className="flex flex-row items-center">
-          <div className="relative mr-3 flex h-10 w-10 rounded-full">
+          <Link href="/account" className="relative mr-3 flex h-10 w-10 rounded-full">
             <Image
               src="/assets/images/Taylor-Swift.png"
               alt="photo-profile"
               fill
               className="rounded-full"
             />
-          </div>
+          </Link>
           <div className="relative flex h-full w-2/5 grow">
             <FiSearch className="my-aut2 absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-hitam-50" />
             <input

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { BsCardChecklist, BsChatLeftDots } from 'react-icons/bs'
 import { LiaHomeSolid } from 'react-icons/lia'
 import { PiCreditCard } from 'react-icons/pi'
@@ -73,12 +74,14 @@ export function BottomBar() {
         <p className="text-center text-[10px] font-bold text-primary">Transaction</p>
       </div>
       <div className="flex w-[115px] flex-col items-end border-x border-white bg-transparent" />
-      <div className="absolute bottom-6 left-1/2 flex h-20 w-20 -translate-x-1/2 flex-col justify-center rounded-full border-4 border-transparent bg-primary">
-        <div className="flex justify-center">
-          <LiaHomeSolid className="textWhite h-10 w-10 object-contain" />
+      <Link href="/home">
+        <div className="absolute bottom-6 left-1/2 flex h-20 w-20 -translate-x-1/2 flex-col justify-center rounded-full border-4 border-transparent bg-primary">
+          <div className="flex justify-center">
+            <LiaHomeSolid className="textWhite h-10 w-10 object-contain" />
+          </div>
+          <p className="textWhite text-center text-xs font-bold">Home</p>
         </div>
-        <p className="textWhite text-center text-xs font-bold">Home</p>
-      </div>
+      </Link>
       <div className="absolute left-1/2 z-0 -translate-x-1/2">
         <BackActive />
       </div>

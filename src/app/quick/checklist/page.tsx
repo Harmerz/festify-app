@@ -241,7 +241,7 @@ export default function CheckList() {
   ])
 
   const [addModal, setAddModal] = useState(false)
-  const [editModal, setEditModal] = useState(true)
+  const [editModal, setEditModal] = useState(false)
 
   return (
     <div className="min-h-[100vh] w-full bg-background">
