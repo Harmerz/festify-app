@@ -26,3 +26,38 @@ body {
 #sort_result::-webkit-scrollbar {
   display: none;
 }
+
+#rounded {
+  --ratio: 0.75;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+  position: relative;
+  clip-path: circle(50%);
+}
+
+#rounded::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: conic-gradient(
+    #4f4384 0 calc(var(--ratio) * 360deg),
+    transparent calc(var(--ratio) * 360deg) 360deg
+  );
+  z-index: -2;
+}
+
+#rounded::after {
+  content: '';
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  top: 4px;
+  left: 4px;
+  background-color: #f7f6ff;
+  border-radius: 50%;
+  z-index: -1;
+}
