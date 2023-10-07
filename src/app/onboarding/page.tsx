@@ -2,11 +2,15 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { useSession } from 'next-auth/react'
 import { useState } from 'react'
 
 import { Button } from '@/components/element'
 
 export default function OnboardingPage() {
+  const { data: session } = useSession()
+
+  console.log(session)
   const data = [
     {
       title: 'Manage your expenses',

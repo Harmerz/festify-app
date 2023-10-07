@@ -1,7 +1,11 @@
-import './globals.css'
+import '@/app/globals.css'
 
 import { Metadata } from 'next'
+import { getServerSession } from 'next-auth/next'
 import React from 'react'
+
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+import Provider from '@/app/context/client'
 
 export const metadata: Metadata = {
   title: 'Festify APP',
@@ -12,10 +16,13 @@ export const metadata: Metadata = {
   themeColor: '#ffffff',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const session = await getServerSession(authOptions)
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={` min-w-screen min-h-screen bg-primary`}>
+        <Provider session={session}>{children}</Provider>
+      </body>
     </html>
   )
 }
