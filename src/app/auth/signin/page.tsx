@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { signIn } from 'next-auth/react'
 import { useState } from 'react'
@@ -113,6 +114,14 @@ export default function Page() {
           </button>
         </form>
       </div>
+      <div className="flex w-full justify-center">
+        <p className="mb-3 text-center text-black">
+          Don’t have an account yet?{' '}
+          <Link href="/auth/signup">
+            <span className="font-bold">Sign Up</span>
+          </Link>
+        </p>
+      </div>{' '}
     </div>
   )
 }

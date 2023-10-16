@@ -2,6 +2,7 @@
 
 import axios from 'axios'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
 
@@ -102,24 +103,24 @@ export default function Page() {
               required
             />
           </div>
-          <div className="mt-4 flex items-start">
-            <div className="flex h-5 items-center">
-              <label htmlFor="remember" className="ml-2 text-sm font-medium text-black">
-                <input id="remember" type="checkbox" value="" className="mr-2 text-black" />
-                Remember me
-              </label>
-            </div>
-          </div>
           <button
             type="submit"
             className={`mt-4 h-16 w-full rounded-lg bg-primary text-base text-white ${
               loading ? 'bg-primary-600' : ''
             }`}
           >
-            Log In
+            SignUp
           </button>
         </form>
       </div>
+      <div className="flex w-full justify-center">
+        <p className="mb-3 text-center text-black">
+          Already have an account?{' '}
+          <Link href="/auth/signin">
+            <span className="font-bold">Log In</span>
+          </Link>
+        </p>
+      </div>{' '}
     </div>
   )
 }
