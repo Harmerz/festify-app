@@ -67,12 +67,17 @@ export function BottomBar() {
         </div>
         <p className="text-center text-[10px] font-bold text-primary">Budget</p>
       </div>
-      <div className="z-10 flex  h-14 w-1/6 grow flex-col justify-center border border-white bg-white">
-        <div className="flex justify-center">
-          <BillDollar className="h-6 w-6 object-contain text-primary" />
+      <Link
+        href="/home/transaction"
+        className="z-10 flex  h-14 w-1/6 grow flex-col justify-center border border-white bg-white"
+      >
+        <div className="z-10 flex  h-14 w-full grow flex-col justify-center border border-white bg-white">
+          <div className="flex justify-center">
+            <BillDollar className="h-6 w-6 object-contain text-primary" />
+          </div>
+          <p className="text-center text-[10px] font-bold text-primary">Transaction</p>
         </div>
-        <p className="text-center text-[10px] font-bold text-primary">Transaction</p>
-      </div>
+      </Link>
       <div className="flex w-[115px] flex-col items-end border-x border-white bg-transparent" />
       <Link href="/home">
         <div className="absolute bottom-6 left-1/2 flex h-20 w-20 -translate-x-1/2 flex-col justify-center rounded-full border-4 border-transparent bg-primary">

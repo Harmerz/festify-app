@@ -38,6 +38,7 @@ export default function Page() {
         // })
         setIsSubmitted(true)
       }
+      router.push('/home')
     } catch (err) {
       setLoading(false)
       setError(err as string)
